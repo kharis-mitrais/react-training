@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import Layout from '../components/Layout';
+import Button from '../components/Button';
 
 const BOOKS_ENDPOINT = 'http://localhost:3002/books';
-
-const BookCard = styled.div``;
 
 const BookDetail = () => {
   const { id } = useParams();
@@ -42,7 +40,7 @@ const BookDetail = () => {
           </div>
         </div>
         <div style={{ flex: '1', paddingLeft: '1.75rem', paddingRight: '1.75rem' }}>
-          <button>Request Loan</button>
+          <Button onClick={() => console.log('pressed')}>Request Loan</Button>
         </div>
       </div>
 
