@@ -16,7 +16,7 @@ const InputStyled = styled.div`
   }
 `;
 
-const Search = ({ onChange, onBlur, value }) => {
+const Search = ({ onChange, onBlur, value }: any) => {
   return (
     <InputStyled>
       <input

@@ -14,6 +14,8 @@ const AppHeader = styled.div`
   font-size: 18px;
   z-index: 10;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  font-family: Poppins;
+  font-style: normal;
 `;
 
 const NavMenu = styled.div`
@@ -33,14 +35,24 @@ const NavMenu = styled.div`
 const Wrapper = styled.div`
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+  font-family: Poppins;
+  font-style: normal;
 `;
 
-const Layout = ({ children }) => {
+const Header = styled.h2`
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+`;
+
+const Layout = ({ children }: any) => {
   return (
     <div>
       <AppHeader>
         <div>
-          <h2>Library App</h2>
+          <Header>Library App</Header>
         </div>
         <NavMenu>
           <Link to='/'>Home</Link>

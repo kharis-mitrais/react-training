@@ -25,6 +25,9 @@ req body :
 ```
 update `isLoan` to `true`
 
+OR
+
+https://my-json-server.typicode.com/kharis-mitrais/react-training/books
 
 ### Run Project
 `yarn start`

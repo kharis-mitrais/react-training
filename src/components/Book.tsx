@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   position: relative;
   height: 359px;
   width: 241px;
-  background: url(${(props) => props.imgUrl});
+  background: url(${(props: {imageUrl: string}) => props.imageUrl});
   background-size: 100% 100%;
   border-radius: 25px;
   cursor: pointer;
@@ -21,6 +21,7 @@ const TitleWrapper = styled.div`
   background-color: #0098f1;
   display: flex;
   justify-content: center;
+  text-align:center;
 `;
 
 const Title = styled.span`
@@ -30,10 +31,22 @@ const Title = styled.span`
   letter-spacing: 0.1rem;
 `;
 
-const Book = ({ id, imgUrl, title }) => {
+export interface BookInterface {
+  id: string,
+  imageUrl: string,
+  title: string
+  author: string,
+  year: number,
+  stock: number,
+  rating: number,
+  description: string,
+  isLoan: boolean
+}
+
+const Book = ({ id, imageUrl, title }: BookInterface) => {
   return (
     <Link to={`/bookDetail/${id}`}>
-      <Wrapper imgUrl={imgUrl}>
+      <Wrapper imageUrl={imageUrl}>
         <TitleWrapper>
           <Title>{title}</Title>
         </TitleWrapper>
